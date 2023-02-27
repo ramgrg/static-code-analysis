@@ -4,4 +4,24 @@
   <artifactId>static-code-analysis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>StaticCodeAnalysis</name>
+  <build>
+	  <plugins>
+		  <plugin>
+			  <artifactId>maven-compiler-plugin</artifactId>
+        	  <version>3.1</version>
+        	  <configuration>
+				  <source>1.8</source>
+				  <target>1.8</target>
+			  </configuration>
+		  </plugin>
+	  </plugins>
+  </build>
+  <dependencies>
+	  <dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-api</artifactId>
+	    <version>5.9.2</version>
+	    <scope>test</scope>
+	</dependency>
+  </dependencies>
 </project>
