@@ -1,3 +1,4 @@
+package com.se4gd.thesis.test;
 import java.util.ArrayList;
 
 public class CarDetails {
@@ -5,17 +6,19 @@ public class CarDetails {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<Car> cars = new ArrayList<>();
+		ArrayList<Car> cars = new ArrayList<Car>();
 		Car corollaCar = new Car("Toyota corolla", "AJY123D03", 2009, 16, 21500);
 		Car polOCar = new Car("Volkswagen polo", "VWY123POL03", 2015, 19, 14000);
 		cars.add(polOCar);
 		cars.add(corollaCar);
 		showCarDetails(cars);
 	}
+
 	public static double taxableAmount(float price) {
 		double taxablePrice = price * TAX_RATE;
 		return taxablePrice;
 	}
+
 	public static void showCarDetails(ArrayList<Car> cars) {
 		for (Car car : cars) {
 			System.out.println("-----------Details of cars----------------");

@@ -1,5 +1,9 @@
+package com.se4gd.thesis.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.se4gd.thesis.test.Car;
+import com.se4gd.thesis.test.CarDetails;
 
 public class CarDetailsTest {
 	

@@ -1,9 +1,12 @@
+package com.se4gd.thesis.test;
 
 public class Car {
-	String model, vehicleIdentification;
-	int buildYear, mileage;
-	float price;
-	
+	private String model;
+	private String vehicleIdentification;
+	private int buildYear;
+	private int mileage;
+	private float price;
+
 	public Car() {
 		// TODO Auto-generated constructor stub
 	}
