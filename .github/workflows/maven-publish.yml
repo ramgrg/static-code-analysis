@@ -34,7 +34,7 @@ jobs:
      # run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
      # env:
         #GITHUB_TOKEN: ${{ github.token }}
-      run : mvn -B package --file pom.xml
+      run : mvn -B package --file static-code-analysis/pom.xml
            mkdir artifacts && cp target/*.jar artifacts
            cd artifacts && ls
     - name: Save artifact 
