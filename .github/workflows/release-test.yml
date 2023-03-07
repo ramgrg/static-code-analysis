@@ -23,6 +23,12 @@ jobs:
         distribution: 'adopt'
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn --batch-mode deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      run : |
+            mvn -B package --file static-code-analysis/pom.xml
+            mkdir artifacts && cp target/*.jar artifacts
+            cd artifacts && ls
+    - name: Save artifact 
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-actions-artifact
+        path: artifacts
