@@ -25,7 +25,7 @@ jobs:
     - name: Publish to GitHub Packages Apache Maven
       run : |
             mvn -B package --file static-code-analysis/pom.xml
-            mkdir artifacts && cp target/*.jar artifacts
+            mkdir artifacts && cp ../target/*.jar artifacts
             cd artifacts && ls
     - name: Save artifact 
       uses: actions/upload-artifact@v2
