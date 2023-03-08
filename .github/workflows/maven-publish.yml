@@ -28,6 +28,6 @@ jobs:
       run: mvn -B package --file static-code-analysis/pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn -B deploy --file static-code-analysis/pom.xml
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
